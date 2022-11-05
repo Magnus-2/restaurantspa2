@@ -1,0 +1,13 @@
+<div>Here you cann see all your Users</div>
+
+<br/><br/>
+Here you see all your Reservation.<br/><br/>
+Lets display all Reservations.<br/>
+Reservation Date: {{reservation.reservations.date}} <br/>
+Reservation Time: {{reservation.reservations.time}} <br/>
+Reservation Seats: {{reservation.reservations.rSeats}} <br/>
+Restaurant Name: {{reservation.reservations.rName}} <br/>
+Reservations:<br/>
+<div *ngFor="let reservations of reservation.reservation; index as i">
+ Reservation Nr. {{ i+1 }}, Datum: {{ reservations.date }}, Zeit: {{reservations.time}} , Sitzplatzanzahl {{reservations.rSeats}} , Restaurantname: {{reservations.rName}}
+</div>

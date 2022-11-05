@@ -1,0 +1,35 @@
+<div>
+    Here you cann add users
+</div>
+
+<br/><br/>
+Here you add a User.<br/><br/>
+<h2>Add a users</h2>
+<br>
+<label>Firstame</label>
+<div>
+ <input #userfirstnamebox type="text" [(ngModel)]="userfirstname" required>
+</div>
+<label>Lastname</label>
+<div>
+ <input #userlastnamebox type="text" [(ngModel)]="userlastname" required>
+</div>
+<label>Email</label>
+<div>
+ <input #useremailbox type="text" [(ngModel)]="useremail" required>
+</div>
+<label>Phonenumber</label>
+<div>
+ <input #userphonenumberbox type="text" [(ngModel)]="userphonenumber" required>
+</div>
+<label>Password</label>
+<div>
+ <input #userpasswordbox type="text" [(ngModel)]="userpassword" required>
+</div>
+<!-- <label>Priority</label> -->
+<!-- <div> -->
+ <!-- <input #taskprioritybox type="text" [(ngModel)]="taskpriority" required> -->
+<!-- </div> -->
+<button (click)="storeDataOnDB()">Send data to server</button>
+<br/><br/>
+back home.<br/><br/>

@@ -1,0 +1,26 @@
+<div>
+    Here you cann add a Reservation</div>
+
+<br/><br/>
+Here you add a Reservation.<br/><br/>
+<h2>Add a Reservation</h2>
+<br>
+<label>Date</label>
+<div>
+ <input #reservationsdatebox type="text" [(ngModel)]="reservationsdate" required>
+</div>
+<label>Time</label>
+<div>
+ <input #reservationstimebox type="text" [(ngModel)]="reservationstime" required>
+</div>
+<label>Seats</label>
+<div>
+ <input #restaurantSeatsbox type="text" [(ngModel)]="restaurantSeats" required>
+</div>
+<label>Restaurant</label>
+<div>
+ <input #restaurantnamebox type="text" [(ngModel)]="restaurantname" required>
+</div>
+<button (click)="storeDataOnDB()">Send data to server</button>
+<br/><br/>
+

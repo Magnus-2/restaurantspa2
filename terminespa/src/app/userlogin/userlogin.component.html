@@ -1,0 +1,15 @@
+
+<br/><br/>
+Here you Login as a User.<br/><br/>
+<h2>Login</h2>
+<br>
+<label>Email</label>
+<div>
+ <input #useremailbox type="text" [(ngModel)]="useremail" required>
+</div>
+<label>Password</label>
+<div>
+ <input #userpasswordbox type="text" [(ngModel)]="userpassword" required>
+</div>
+<button (click)="requestDataOnDB()">Check Login</button>
+back home. <br/>

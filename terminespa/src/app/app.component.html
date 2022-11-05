@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="home">
+
+<h1>Welcome to the Mosbach Task Organizer</h1>
+
+Here you can Manage all your tasks for the DHBW <hr>
+The program was written by {{author}}, he is 
+currently {{age}}
+<hr>
+<a href="https://developer.amazon.com/alexa/console/ask/test/amzn1.ask.skill.a97e7a54-cf0c-4db3-a2d4-8a977f775ca6/development/de_DE/">Auf zur Alexa</a>
+<p></p>
+<p>Here u can see all ur Uers</p>
+<p>Here u can add a User</p>
+
+<a [routerLink] = "['/LinkUserall']"> show all Users</a> &nbsp;
+<a [routerLink] = "['/LinkUseradd']"> Sign Up</a> &nbsp;
+<a [routerLink] = "['/LinkUserlogin']">Sign in</a> &nbsp;
+<a [routerLink] = "['/LinkReservationsadd']">Make a Reservation</a> &nbsp;
+<a [routerLink] = "['/LinkReservationsall']">Show all Reservation</a> &nbsp;
+<router-outlet></router-outlet>
+  </div>
+
+</body>
+</html>
