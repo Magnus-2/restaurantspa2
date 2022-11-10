@@ -41,7 +41,7 @@ back home.<br/><br/>-->
 <!--Vorname-->
           <div class="form-group">
             <label for="firstname">Vorname</label>
-            <input name="firstname" formControlName="firstname" type="text" class="form-control" ngModel=""  >
+            <input formControlName="firstname" class="form-control" #userfirstnamebox type="text" [(ngModel)]="userfirstname">
 
             <ng-container *ngIf="RegisterForm.controls['firstname'].dirty || RegisterForm.controls['firstname'].touched">
                 <p class="error" *ngIf="RegisterForm.controls['firstname'].errors?.['required']"> Du musst doch einen Vornamen haben?</p>
@@ -50,7 +50,7 @@ back home.<br/><br/>-->
 <!--Nachname-->
           <div class="form-group">
             <label for="lastname">Nachname</label>
-            <input name="lastname"  formControlName="lastname" type="text" class="form-control" ngModel="" >
+            <input #userlastnamebox type="text" [(ngModel)]="userlastname" formControlName="lastname" class="form-control" >
 
             <ng-container *ngIf="RegisterForm.controls['lastname'].dirty || RegisterForm.controls['lastname'].touched">
                 <p class="error" *ngIf="RegisterForm.controls['lastname'].errors?.['required']"> Du musst doch einen Nachnamen haben?</p>
@@ -59,7 +59,8 @@ back home.<br/><br/>-->
 <!--NUMMER-->
           <div class="form-group">
             <label for="phonenumber">Telefonnummer</label>
-            <input name="phonenumber" formControlName="phonenumber" type="text" class="form-control" ngModel="" >
+            <input #userphonenumberbox type="text" [(ngModel)]="userphonenumber" formControlName="phonenumber" class="form-control">
+
 
             <ng-container *ngIf="RegisterForm.controls['phonenumber'].dirty || RegisterForm.controls['phonenumber'].touched">
                 <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['required']">Jeder hat ein Handy</p>
@@ -71,7 +72,7 @@ back home.<br/><br/>-->
 <!--EMAIL-->
           <div class="form-group">
             <label for="email">Email</label>
-            <input name="email" formControlName="email" type="text" class="form-control" ngModel="" >
+            <input #useremailbox type="text" [(ngModel)]="useremail" formControlName="email" class="form-control">
 
             <ng-container *ngIf="RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched">
               <p class="error" *ngIf="RegisterForm.controls['email'].errors?.['required']">Trag deine Email ein</p>
@@ -88,7 +89,7 @@ back home.<br/><br/>-->
 <!--Password-->
           <div class="form-group">
             <label for="password">Passwort</label>
-            <input name="password" formControlName="password" type="password" class="form-control" ngModel="" >
+            <input #userpasswordbox type="password" [(ngModel)]="userpassword" formControlName="password" class="form-control">
 
             <ng-container *ngIf="RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched">
                 <p class="error" *ngIf="RegisterForm.controls['password'].errors?.['required']"> Du brauchst ein Passwort</p>
