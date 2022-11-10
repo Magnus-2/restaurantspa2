@@ -1,4 +1,4 @@
-
+<!-- 
 <br/><br/>
 Here you Login as a User.<br/><br/>
 <h2>Login</h2>
@@ -12,4 +12,67 @@ Here you Login as a User.<br/><br/>
  <input #userpasswordbox type="text" [(ngModel)]="userpassword" required>
 </div>
 <button (click)="requestDataOnDB()">Check Login</button>
-back home. <br/>
+back home. <br/> -->
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>login</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form  (ngSubmit)="requestDataOnDB()"  >
+
+<!--EMAIL-->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" formControlName="email" type="text" class="form-control" ngModel="" >
+
+          </div>
+<!--Password-->
+          <div class="form-group">
+            <label for="password">Passwort</label>
+            <input name="password" formControlName="password" type="password" class="form-control" ngModel="" >
+
+          </div>
+          
+<!--BUTTON-->
+          <div class="form-group">
+            <button  class="btn btn-primary" type="submit">
+            LogIn
+            </button>
+          </div>
+
+
+        </form> 
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+  
+    
+
+
+
+
+
+
+
+</body>
+</html>

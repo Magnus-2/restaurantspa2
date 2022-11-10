@@ -62,7 +62,7 @@ back home.<br/><br/>-->
             <input name="phonenumber" formControlName="phonenumber" type="text" class="form-control" ngModel="" >
 
             <ng-container *ngIf="RegisterForm.controls['phonenumber'].dirty || RegisterForm.controls['phonenumber'].touched">
-                <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['phonenumber']">Jeder hat ein Handy</p>
+                <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['required']">Jeder hat ein Handy</p>
             </ng-container>
             <ng-container *ngIf="RegisterForm.controls['phonenumber'].dirty || RegisterForm.controls['phonenumber'].touched">
                 <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['pattern']"> Eine Telefonnummer hat keine Buchstaben</p>
