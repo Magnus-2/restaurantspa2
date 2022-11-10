@@ -26,10 +26,10 @@
               Menü
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item disabled" href="#">Reservierungen</a></li>
+              <li><a class="dropdown-item disabled" [routerLink] = "['/LinkReservationsall']" >Alle Reservierungen</a></li>
               <li><a class="dropdown-item" href="#"></a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" [routerLink] = "['/LinkReservationsall']" >Neue Reservierung anlegen</a></li>
             </ul>
           </li>
         </ul>
@@ -44,7 +44,7 @@
             <ul class="dropdown-menu">
               <li><router-outlet></router-outlet></li>
               <li><a class="dropdown-item " [routerLink] = "['/LinkUserlogin']">LogIn</a></li>
-              <li><a class="dropdown-item" [routerLink] = "['/LinkUserlogin']" >SignIn</a></li>
+              <li><a class="dropdown-item" [routerLink] = "['/LinkUseradd']" >SignIn</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" [routerLink] = "['/LinkUserall']">Show all user</a></li>
             </ul>
