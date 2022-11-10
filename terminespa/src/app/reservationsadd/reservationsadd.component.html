@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     Here you cann add a Reservation</div>
 
 <br/><br/>
@@ -22,5 +22,75 @@ Here you add a Reservation.<br/><br/>
  <input #restaurantnamebox type="text" [(ngModel)]="restaurantname" required>
 </div>
 <button (click)="storeDataOnDB()">Send data to server</button>
-<br/><br/>
+<br/><br/> -->
+
+
+<html lang="de">
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>login</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form  (ngSubmit)="storeDataOnDB()"  >
+
+<!--Date-->
+          <div class="form-group">
+            <label for="email">Date</label>
+            <input #reservationsdatebox type="text" [(ngModel)]="reservationsdate" required>
+
+          </div>
+
+<!--Time-->
+            <div class="form-group">
+            <label for="password">Time</label>
+            <input #reservationstimebox type="text" [(ngModel)]="reservationstime" required>
+
+  </div>
+
+
+<!--Seats-->
+          <div class="form-group">
+            <label for="password">Seats</label>
+            <input #restaurantSeatsbox type="text" [(ngModel)]="restaurantSeats" required>
+          </div>
+<!--Restaurant-->
+          <div class="form-group">
+            <label for="password">Restaurant</label>
+            <input #restaurantnamebox type="text" [(ngModel)]="restaurantname" required>
+
+          </div>
+          
+          
+<!--BUTTON-->
+          <div class="form-group">
+            <button  class="btn btn-primary" type="submit">
+            Reservieren
+            </button>
+          </div>
+
+
+        </form> 
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+  
+
+
+</body>
+</html>
 
