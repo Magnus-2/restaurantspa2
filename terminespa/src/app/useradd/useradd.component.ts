@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from '../task-service';
 
 @Component({
@@ -16,6 +17,27 @@ export class UseraddComponent implements OnInit {
   userphonenumber = '';
   userpassword = '';
   // taskpriority = '';
+  public RegisterForm: FormGroup = new FormGroup({
+    firstname: new FormControl('',[
+      Validators.required
+    ]),
+    lastname : new FormControl('',[
+      Validators.required
+    ]),
+    phonenumber: new FormControl('',[
+      Validators.required,
+      Validators.pattern("^[0-9]*$")
+    ]),
+    email: new FormControl('',[
+      Validators.required,
+      Validators.email
+    ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5)
+    ])
+    
+    });
   storeDataOnDB(): void {
   alert('Text changed to' + this.userfirstname + this.userlastname + this.useremail + this.userphonenumber + this.userpassword);
   let user = {

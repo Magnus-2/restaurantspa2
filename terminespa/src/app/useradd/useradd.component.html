@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     Here you cann add users
 </div>
 
@@ -25,11 +25,88 @@ Here you add a User.<br/><br/>
 <label>Password</label>
 <div>
  <input #userpasswordbox type="text" [(ngModel)]="userpassword" required>
-</div>
+</div>-->
 <!-- <label>Priority</label> -->
 <!-- <div> -->
  <!-- <input #taskprioritybox type="text" [(ngModel)]="taskpriority" required> -->
 <!-- </div> -->
-<button (click)="storeDataOnDB()">Send data to server</button>
+<!--<button (click)="storeDataOnDB()">Send data to server</button>
 <br/><br/>
-back home.<br/><br/>
+back home.<br/><br/>-->
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form [formGroup]="RegisterForm" (ngSubmit)=" storeDataOnDB()"  >
+<!--Vorname-->
+          <div class="form-group">
+            <label for="firstname">Vorname</label>
+            <input name="firstname" formControlName="firstname" type="text" class="form-control" ngModel=""  >
+
+            <ng-container *ngIf="RegisterForm.controls['firstname'].dirty || RegisterForm.controls['firstname'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['firstname'].errors?.['required']"> Du musst doch einen Vornamen haben?</p>
+            </ng-container>
+          </div>
+<!--Nachname-->
+          <div class="form-group">
+            <label for="lastname">Nachname</label>
+            <input name="lastname"  formControlName="lastname" type="text" class="form-control" ngModel="" >
+
+            <ng-container *ngIf="RegisterForm.controls['lastname'].dirty || RegisterForm.controls['lastname'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['lastname'].errors?.['required']"> Du musst doch einen Nachnamen haben?</p>
+            </ng-container>
+          </div>
+<!--NUMMER-->
+          <div class="form-group">
+            <label for="phonenumber">Telefonnummer</label>
+            <input name="phonenumber" formControlName="phonenumber" type="text" class="form-control" ngModel="" >
+
+            <ng-container *ngIf="RegisterForm.controls['phonenumber'].dirty || RegisterForm.controls['phonenumber'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['phonenumber']">Jeder hat ein Handy</p>
+            </ng-container>
+            <ng-container *ngIf="RegisterForm.controls['phonenumber'].dirty || RegisterForm.controls['phonenumber'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['phonenumber'].errors?.['pattern']"> Eine Telefonnummer hat keine Buchstaben</p>
+            </ng-container>
+          </div>
+<!--EMAIL-->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" formControlName="email" type="text" class="form-control" ngModel="" >
+
+            <ng-container *ngIf="RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched">
+              <p class="error" *ngIf="RegisterForm.controls['email'].errors?.['required']">Trag deine Email ein</p>
+            </ng-container>
+
+
+            <ng-container *ngIf="RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['email'].errors?.['email']"> Das ist keine Email</p>
+               
+                
+            </ng-container>
+
+          </div>
+<!--Password-->
+          <div class="form-group">
+            <label for="password">Passwort</label>
+            <input name="password" formControlName="password" type="password" class="form-control" ngModel="" >
+
+            <ng-container *ngIf="RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['password'].errors?.['required']"> Du brauchst ein Passwort</p>
+            </ng-container>
+            <ng-container *ngIf="RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched">
+                <p class="error" *ngIf="RegisterForm.controls['password'].errors?.['minlength']"> Ab 5 Zeichen könne wir uns unterhalten</p>
+            </ng-container>
+          </div>
+          
+<!--BUTTON-->
+          <div class="form-group">
+            <button [disabled]="!(RegisterForm.valid && (RegisterForm.dirty || RegisterForm.touched))" class="btn btn-primary" type="submit">
+            Resgistrieren
+            </button>
+          </div>
+
+
+        </form> 
+      </div>
+    </div>
+  </div>

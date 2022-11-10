@@ -14,6 +14,7 @@ import { RestaurantallComponent } from './restaurantall/restaurantall.component'
 import { RestaurantloginComponent } from './restaurantlogin/restaurantlogin.component';
 import { ReservationsaddComponent } from './reservationsadd/reservationsadd.component';
 import { ReservationsallComponent } from './reservationsall/reservationsall.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,12 @@ import { ReservationsallComponent } from './reservationsall/reservationsall.comp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
+  ],
+  exports:[
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]
